@@ -1,0 +1,41 @@
+#toggle {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #333;
+    position: relative;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+    z-index: 1;
+    scale: 0.9;
+}
+
+#toggle::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #EEE;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in;
+}
+
+#toggle:checked {
+    background: #e2e3e5;
+}
+
+#toggle:checked::before {
+    background: #343a40;
+    left: 32px;
+}
+
+.dark {
+    background-color: #000000; /* Dark mode background color */
+    color: #ffffff; /* Text color for dark mode */
+}
